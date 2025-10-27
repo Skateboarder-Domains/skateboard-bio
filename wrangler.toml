@@ -1,0 +1,29 @@
+name = "skateboard-bio"
+compatibility_date = "2024-10-27"
+
+# Environment variables (set via Cloudflare Pages dashboard)
+# NEON_DATABASE_URL = "postgresql://user:pass@host/db"
+
+# R2 bucket binding for CDN assets
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "skateboarders"
+preview_bucket_name = "skateboarders"
+
+# Pages configuration
+[site]
+bucket = "./public"
+
+# Build configuration for Cloudflare Pages
+[build]
+command = ""
+watch_dirs = ["functions"]
+
+# Environment variables documentation
+# Set these in Cloudflare Pages Dashboard > Settings > Environment Variables:
+# 
+# Production:
+#   NEON_DATABASE_URL = postgresql://username:password@ep-xxx.neon.tech/neondb
+#   R2_ACCOUNT_ID = your-r2-account-id (from Cloudflare R2 dashboard)
+#   R2_ACCESS_KEY_ID = your-access-key (optional, for future S3-compatible access)
+#   R2_SECRET_ACCESS_KEY = your-secret-key (optional, for future S3-compatible access)
