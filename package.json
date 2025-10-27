@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "wrangler pages dev",
     "deploy": "wrangler pages deploy public",
+    "build": "echo 'No build step required'",
     "db:setup": "node scripts/setup-database.js"
   },
   "keywords": ["skateboarding", "api", "cloudflare-pages", "neon", "postgresql"],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@neondatabase/serverless": "^0.9.0"
+    "@neondatabase/serverless": "^0.10.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
