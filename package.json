@@ -1,0 +1,22 @@
+{
+  "name": "skateboard-bio",
+  "version": "1.0.0",
+  "description": "Central API and directory for skateboard.bio network - serves data to 150+ individual .bio domains",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev",
+    "deploy": "wrangler pages deploy public",
+    "db:setup": "node scripts/setup-database.js"
+  },
+  "keywords": ["skateboarding", "api", "cloudflare-pages", "neon", "postgresql"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231025.0",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.78.0"
+  }
+}
